@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Frontend Mentor | Loopstudios landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -28,15 +28,15 @@
     <header id="header" class="container-fluid">
         <nav id="navbar">
             <div class="logo">
-                <a href="index.html"><img src="./images/logo.svg" alt="loopstudios-logo"></a>
+                <a href="index.html"><img src="./images/logo.svg" alt="loopstudios"></a>
             </div>
-            <div id="hamburger">
+            <a id="hamburger" href="#" class="hamburger">
                 <img src="./images/icon-hamburger.svg" alt="toggle-icon">
-            </div>
-            <div id="close">
+            </a>
+            <a id="close" href="#">
                 <img src="./images/icon-close.svg" alt="close">
-            </div>
-            <ul id=" navbar-links">
+            </a>
+            <ul id="navbar-links">
                 <li><a href="#" class="nav-links">About</a></li>
                 <li><a href="#" class="nav-links"> Careers</a></li>
                 <li><a href="#" class="nav-links">Events</a></li>
@@ -62,7 +62,7 @@
         <section id="creations-section" class="creations-section">
             <div class="creations-header-wrapper">
                 <h2 class="creations-header">Our creations</h2>
-                <button type="submit" class="btn-inline">See all</button>
+                <button type="button" class="btn-inline">See all</button>
             </div>
 
             <div class="creations-grid-wrapper">
@@ -109,7 +109,7 @@
             </div>
 
             <div class="btn-wrapper">
-                <button type="submit">See all</button>
+                <button type="button">See all</button>
             </div>
         </section>
 
@@ -117,9 +117,9 @@
     <footer id="footer" class="footer container-fluid">
         <div class="footer-wrapper">
             <div class="footer-nav-links-wrapper">
-                <div class="footer-logo">
-                    <img src="./images/logo.svg" alt="loopstudios-logo">
-                </div>
+                <a class="footer-logo" href="./index.html">
+                    <img src="./images/logo.svg" alt="loopstudios">
+                </a>
                 <div class="footer-nav-links">
                     <ul>
                         <li><a href="#" class="nav-links">About</a></li>
