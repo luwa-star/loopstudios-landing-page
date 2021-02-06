@@ -1,0 +1,118 @@
+header {
+    background: url(../images/mobile/image-hero.jpg) center no-repeat;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    nav {
+        @include flex(space-between);
+        background-color: $BlackNav;
+        height: 20%; // replace with padding
+        width: 100vw;
+        .logo {
+            //should be space- between for mobile 
+            width: 30%;
+            @include flex(flex-start);
+            //position: relative;
+            padding-left: 4rem;
+            z-index: 2; //essential for toggled nav
+        }
+        .hamburger {
+            padding-right: 3.5rem;
+        }
+        #close {
+            position: absolute;
+            top: 8.7%;
+            right: 62.7%;
+            visibility: hidden;
+        }
+        ul {
+            @include flex(space-around);
+            width: 40%;
+            margin: 3rem;
+            height: 1.2rem;
+        }
+        li {
+            list-style-type: none;
+            position: relative;
+            a {
+                @include nav-links;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    //header--caption------- start styling from the default!!!
+    .header-caption-wrapper {
+        border: 1px solid $White;
+        width: 80vw;
+        height: auto;
+        padding: 1rem;
+        margin: 13rem auto;
+        .caption {
+            font-weight: 300;
+            font-size: $font-lg; //adjust font-size for >320px screens 
+            color: $White;
+            text-transform: uppercase;
+        }
+    }
+}
+
+//Media Queries
+header {
+    //321px
+    nav {
+        .logo {
+            @include breakpoints-down(x-small) {
+                padding-left: 1.5rem;
+            }
+        }
+        .hamburger {
+            @include breakpoints-down(x-small) {
+                padding-right: 1.2rem;
+            }
+        }
+    }
+    .header-caption-wrapper {
+        @include breakpoints-down(x-small) {
+            width: 85vw;
+            padding: 0.5rem;
+            .caption {
+                @include breakpoints-down(x-small) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+header {
+    .header-caption-wrapper {
+        @include breakpoints-down(medium) {
+            width: 80vw;
+            padding: 1rem;
+            .caption {
+                @include breakpoints-down(medium) {
+                    font-size: $font-lg;
+                }
+            }
+        }
+    }
+}
+
+header {
+    //751px
+    @include breakpoints-up(large) {
+        background: url(../images/desktop/image-hero.jpg) no-repeat;
+    }
+    //1024px
+    .header-caption-wrapper {
+        @include breakpoints-up(large) {
+            width: 60vw;
+            padding: 1.5rem;
+            margin: 8.5rem 13rem 13rem 2rem;
+        }
+        .caption {
+            @include breakpoints-up(large) {
+                font-size: $font-xlg;
+            }
+        }
+    }
+}

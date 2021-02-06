@@ -1,6 +1,9 @@
 $White: hsl(0, 0%, 100%);
-$WhiteHover:hsla(0, 0%, 100%, 0.9); //added
 $Black: hsl(0, 0%, 0%);
 $BlackNav: hsla(0, 0%, 0%, 0.7); //added
 $DarkGray: hsl(0, 0%, 55%);
 $VeryDarkGray: hsl(0, 0%, 41%);
+//font-sizes
+$font-sm:0.9375rem; //body
+$font-lg:2.375rem; //mobile-header-caption
+$font-xlg:4.2rem; //xlarge screen-caption
