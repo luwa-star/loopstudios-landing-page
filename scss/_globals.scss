@@ -1,0 +1,75 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: $font-sm;
+    line-height: 1.2;
+}
+
+.container-fluid {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    @include flex(center);
+    flex-direction: column;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+button {
+    border: 1px solid $Black;
+    background: $White;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: 500ms ease-in;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        background: $Black;
+        border: none;
+        outline: none;
+        color: $White;
+    }
+}
+
+//visibility
+.hide-mobile {
+    //for nav-links max-width:1023px 
+    @include breakpoints-down(medium) {
+        display: none!important;
+    }
+}
+
+.hide-desktop {
+    //for hamburger menu min-width:1024px
+    @include breakpoints-up(large) {
+        display: none;
+    }
+}
+
+//bg-hero

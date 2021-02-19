@@ -1,0 +1,76 @@
+.container {
+    @include breakpoints-up(x-large) {
+        @include flex(start);
+    }
+}
+
+.about {
+    &-section {
+        @include breakpoints-up(x-large) {
+            position: relative;
+            padding: 10rem 10.25rem 4.375rem 8rem;
+        }
+        padding: 7.75rem 1.5rem 0rem;
+    }
+    &-img-wrapper {
+        @include breakpoints-up(large) {
+            @include flex(center);
+            width: 100%;
+        }
+        @include breakpoints-up(x-large) {
+            @include flex(start);
+        }
+        .interactive-mobile {
+            @include breakpoints-up(large) {
+                display: none;
+            }
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .interactive-desktop {
+            @include breakpoints-up(large) {
+                display: block;
+            }
+            display: none;
+            width: 45.6875rem;
+            height: 31.25rem;
+        }
+    }
+    &-content-wrapper {
+        @include breakpoints-up(large) {
+            padding: 6rem 5.75rem;
+        }
+        @include breakpoints-up(x-large) {
+            position: absolute;
+            top: 21.625rem;
+            left: 46rem;
+            padding: 6rem 5.75rem;
+        }
+        background: $White;
+        padding: 4.0625rem 2.125rem;
+    }
+    &-content-heading {
+        @include breakpoints-up(large) {
+            font-size: $font-title-lg
+        }
+        @include breakpoints-up(x-large) {
+            text-align: left;
+        }
+        font-size:$font-title-sm;
+        color: $Black;
+        text-align: center;
+    }
+    &-content {
+        @include breakpoints-up(large) {
+            padding-top: 2.5rem;
+        }
+        @include breakpoints-up(x-large) {
+            text-align: left;
+        }
+        padding-top: 2.625rem;
+        color: $VeryDarkGray;
+        text-align: center;
+        line-height: 1.25rem;
+    }
+}
