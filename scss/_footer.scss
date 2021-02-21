@@ -37,12 +37,20 @@
                 padding-right: 2.25rem;
                 font-size: $font-sm;
             }
+            @include nav-links;
             position: relative;
             display: block;
             padding-bottom: 2.25rem;
             text-align: center;
-            color: black;
+            color:$White;
             font-size: 1.125rem;
+            &::after {
+                @include breakpoints-up(large) {
+                    left: 0;
+                }
+                top: 35px;
+                left: 75px;
+            }
         }
     }
     .footer-social-links-wrapper {
@@ -71,7 +79,16 @@
                 padding-left: 1.375rem;
                 padding-right: 0;
             }
+            @include nav-links;
+            position: relative;
             padding-right: 2.25rem;
+            &::after {
+                @include breakpoints-up(large) {
+                    right: 0;
+                }
+                top: 35px;
+                right: 30px;
+            }
         }
     }
     .footer-rights-wrapper {
