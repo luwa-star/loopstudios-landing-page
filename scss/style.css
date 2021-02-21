@@ -218,7 +218,8 @@ header {
 
 @media (min-width: 64em) {
   header {
-    background: url(../images/desktop/image-hero.jpg) no-repeat;
+    background: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
   }
 }
 

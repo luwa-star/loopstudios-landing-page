@@ -11,7 +11,8 @@ header {
         background-position: top center;
     }
     @include breakpoints-up(large) {
-        background: url(../images/desktop/image-hero.jpg) no-repeat;
+        background: url(../images/desktop/image-hero.jpg);
+        background-size: cover;
     }
     background: url(../images/mobile/image-hero.jpg) center no-repeat;
     font-family: 'Josefin Sans',
